@@ -26,9 +26,9 @@ class ProductsTableSeeder extends Seeder
             [
                 'name' => 'Burger',
                 'ingredients' => [
-                    'Beef' => 10000,
-                    'Cheese' => 2500,
-                    'Onion' => 500
+                    'Beef' => 150,
+                    'Cheese' => 30,
+                    'Onion' => 20
                 ]
             ],
 
