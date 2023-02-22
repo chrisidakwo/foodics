@@ -9,8 +9,8 @@
 - Now, you can create a new order using the endpoint: `/api/orders`. Something like:
 
 ```http request
-POST http://127.0.0.1:8000/api/orders
 Content-Type: application/json
+Accept: application/json
 
 {
   "products": [
@@ -21,6 +21,8 @@ Content-Type: application/json
   ]
 }
 ```
+
+**NB:** Only two products are seeded (with product ids as 1 and 2). Hence, you can only use those ids to place an order
 
 ### HOW TO TEST
 
