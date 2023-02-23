@@ -54,7 +54,9 @@ class CheckIngredientStockLevelTest extends TestCase
 
         $this->assertNotNull($ingredient->low_stock_notification_sent_at);
         $this->assertLessThan($initialQty, $ingredient->quantity);
-        Mail::assertSent(LowIngredientStockMail::class);
+        Mail::assertSent(function (LowIngredientStockMail $mail) use ($ingredient) {
+            return $mail->ingredient->id === $ingredient->id;
+        });
     }
 
     public function test_mail_should_not_be_sent_more_than_once(): void
